@@ -1,0 +1,22 @@
+audio {
+  width: 100%;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}
+
+.video-wrap {
+  height: 0;
+  padding-bottom: 56.25%;
+  padding-top: $base-spacing-unit-medium;
+  position: relative;
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

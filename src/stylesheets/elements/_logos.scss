@@ -1,0 +1,16 @@
+// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
+
+header {
+  .logo {
+    text-decoration: none;
+    color: $navy;
+  }
+}
+
+footer {
+  .logo {
+    color: $grey-5;
+    margin-top: $base-spacing-unit-medium;
+    margin-bottom: $base-spacing-unit-tiny;
+  }
+}

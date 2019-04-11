@@ -1,0 +1,21 @@
+//Clear Fix can be applied to any class by adding `@include clearfix`
+
+.visually-hidden {
+  visibility: hidden;
+}
+.sr-only {
+	@include screenreader;
+}
+
+// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
+
+.sr-only--focusable {
+  &:focus, &:active {
+    margin: 0;
+    clip: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding: $base-spacing-unit-tiny;
+  }
+}

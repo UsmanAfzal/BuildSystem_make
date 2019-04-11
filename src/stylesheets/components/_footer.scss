@@ -1,0 +1,22 @@
+// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
+
+footer {
+  width: 100%;
+	box-sizing: border-box; // 'box-sizing' basic support for our supported browsers
+	display: inline-block;
+	padding-bottom: $base-spacing-unit-small;
+  background-color: $navy;
+  a:link,
+  a:visited,
+  a:hover, {
+    color: $grey-5;
+  }
+}
+
+// Physical Print Styles
+
+@media print {
+  footer {
+    display: none;
+  }
+}

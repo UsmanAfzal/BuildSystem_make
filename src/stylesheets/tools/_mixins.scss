@@ -1,0 +1,53 @@
+// Pass in desired Pixel value to get REM/Pixel fallback
+@mixin fontsize($size){
+  font-size:   $size + 0px;
+  font-size:   ($size / 16) + 0rem;
+}
+
+// Pass in background colour, border color, typography, hover colour
+@mixin highlight-color($background, $border, $color, $hover-color, $line-break){
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  a {
+    &:link,
+    &:visited {
+      color: $color;
+    }
+    &:focus {
+      color: $black;
+    }
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  h1 {
+    color: $color;
+
+    &:after {
+      background-color: $line-break !important;
+    }
+  }
+}
+
+// Screen reader visible only
+@mixin screenreader {
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+// Pass in desired line-break sizes
+@mixin line-break($height, $width, $color) {
+  height: $height;
+  width: $width;
+  margin-top: ($base-spacing-unit-medium - 2); // -2px to compensate for divider height
+  margin-bottom: ($base-spacing-unit-medium - 2); // -2px to compensate for divider height
+  background-color: $color;
+}
